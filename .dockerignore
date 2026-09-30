@@ -1,0 +1,9 @@
+.git
+.gitignore
+.vscode
+frontend
+backend/.env
+backend/secrets
+backend/data/app.db
+backend/**/__pycache__
+backend/**/*.pyc
