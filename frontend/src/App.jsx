@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import {
   predictProduksi, getMapLayer, interpretHasil, predictTrajectory,
   ensureServerAwake,
@@ -34,6 +34,7 @@ function App() {
   const [error, setError] = useState(null)
   const [statusServer, setStatusServer] = useState(null)
   const [detikServer, setDetikServer] = useState(0)
+  const prediksiSedangBerjalan = useRef(false)
 
   // Mulai memeriksa/menghidupkan server sejak halaman dibuka, apa pun tab
   // yang pertama kali dilihat pengguna, agar tab Performa Model juga aman
@@ -46,6 +47,11 @@ function App() {
   }, [])
 
   const handlePrediksi = async () => {
+    // State React baru diterapkan pada render berikutnya. Ref ini berubah
+    // seketika, sehingga klik beruntun tidak bisa membuat request paralel.
+    if (prediksiSedangBerjalan.current) return
+    prediksiSedangBerjalan.current = true
+
     setLoading(true)
     setError(null)
     setHasil(null)
@@ -54,18 +60,17 @@ function App() {
     setTrajectory(null)
     setInsightError(false)
 
-    const serverSiap = await ensureServerAwake((status, detik) => {
-      setStatusServer(status)
-      if (detik !== undefined) setDetikServer(detik)
-    })
-
-    if (!serverSiap) {
-      setError('Server tidak dapat dijangkau setelah beberapa kali percobaan. Silakan coba lagi dalam beberapa saat.')
-      setLoading(false)
-      return
-    }
-
     try {
+      const serverSiap = await ensureServerAwake((status, detik) => {
+        setStatusServer(status)
+        if (detik !== undefined) setDetikServer(detik)
+      })
+
+      if (!serverSiap) {
+        setError('Server tidak dapat dijangkau setelah beberapa kali percobaan. Silakan coba lagi dalam beberapa saat.')
+        return
+      }
+
       // Permintaan dijalankan berurutan (bukan paralel) untuk menghindari
       // beban memori berlebih di backend saat GEE dan TabPFN dipanggil
       // bersamaan, yang sebelumnya menyebabkan proses backend dimatikan
@@ -98,6 +103,7 @@ function App() {
     } catch (err) {
       setError(err.response?.data?.detail || 'Terjadi kesalahan saat memproses prediksi.')
     } finally {
+      prediksiSedangBerjalan.current = false
       setLoading(false)
     }
   }
