@@ -73,5 +73,5 @@ def get_map_layer(payload: MapLayerRequest):
         sawah_geojson=sawah_geojson,
         center_lat=center_lat,
         center_lon=center_lon,
-        jumlah_citra=n_images.getInfo(),
+        jumlah_citra=jumlah_citra,
     )
