@@ -63,13 +63,11 @@ export const SUMBER_DATA = [
 ]
 
 export const KETERBATASAN = [
-  'Model dilatih dari data lima kabupaten periode 2019 sampai 2024. Prediksi di luar rentang tersebut merupakan ekstrapolasi sehingga tingkat kepastiannya lebih rendah.',
-  'Data produksi aktual dalam dataset berakhir pada Desember 2024, sehingga prediksi setelah bulan tersebut tidak dapat dibandingkan dengan data aktual.',
-  'Evaluasi memakai satu tahun data uji (2024), sehingga metrik bersifat indikatif dan belum mencerminkan seluruh kondisi.',
+  'Wilayah kajian terbatas pada Lamongan, Bojonegoro, Ngawi, Jember, dan Tuban. Hasil pengujian belum mewakili seluruh wilayah Indonesia.',
+  'Purwarupa tidak dirancang untuk menghasilkan prediksi pada tingkat wilayah yang lebih kecil, seperti kecamatan, desa, atau lahan individual.',
+  'Dataset pemodelan mencakup data bulanan 2019–2024. Data 2019–2023 digunakan untuk pengembangan model dan data 2024 sebagai pengujian akhir.',
   'Kualitas indeks vegetasi bergantung pada ketersediaan citra bebas awan. Pada bulan dengan tutupan awan tebal, jumlah citra dapat sedikit atau tidak tersedia.',
-  'Indeks dirata-ratakan per kabupaten sehingga tidak menggambarkan variasi antar kecamatan atau antar lahan.',
-  'Ambang kategori vegetasi (NDVI) merupakan pendekatan umum dan belum dikalibrasi khusus untuk lahan sawah di wilayah studi.',
-  'Kategori dan penjelasan hasil bersifat indikatif berdasarkan pola historis, dan bukan pengganti data produksi resmi.',
+  'Purwarupa menghasilkan informasi pendukung pemantauan. Angka evaluasi penelitian berlaku pada pipeline pengembangan; kinerja pipeline operasional memerlukan pengujian tersendiri karena terdapat perbedaan pembentukan komposit dan mask lahan.',
 ]
 
 export const PENGANTAR = {

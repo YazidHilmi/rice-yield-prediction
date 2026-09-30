@@ -13,7 +13,7 @@ NAMA_BULAN = [
 DESKRIPSI_NDVI = {
     "Rendah": (
         "berada pada 25% terendah riwayat NDVI kabupaten ini. Penurunan NDVI dari waktu ke waktu "
-        "umumnya diasosiasikan dengan pencoklatan atau penurunan kehijauan vegetasi, misalnya pada fase "
+        "umumnya diasosiasikan dengan penurunan kehijauan vegetasi, misalnya pada fase "
         "awal tanam atau pascapanen."
     ),
     "Sedang": (
