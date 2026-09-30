@@ -405,7 +405,7 @@ body {
 
 .insight-tabel-wrap {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   margin-bottom: 8px;
 }
@@ -413,9 +413,6 @@ body {
 .site-header {
   background: #ffffff;
   border-bottom: 1px solid #e3e9e5;
-  position: sticky;
-  top: 0;
-  z-index: 10;
 }
 
 .site-header-inner {
@@ -521,8 +518,7 @@ body {
 }
 
 @media (max-width: 720px) {
-  .insight-grid-2,
-  .insight-grid-3 {
+  .insight-tabel-wrap {
     grid-template-columns: 1fr;
   }
 }
