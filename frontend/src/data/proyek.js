@@ -1,14 +1,14 @@
 export const IDENTITAS = {
   kompetisi: 'KOMPRES 16 (2026)',
-  namaTim: 'Nama Tim',                 // ISI
+  namaTim: 'MONITOR ≠ JANITOR',
   institusi: 'Universitas Gunadarma',
 }
 
 export const ANGGOTA = [
-  { nama: 'Nama Anggota 1', npm: 'NPM' },   // ISI
-  { nama: 'Nama Anggota 2', npm: 'NPM' },   // ISI
-  { nama: 'Nama Anggota 3', npm: 'NPM' },   // ISI
-  { nama: 'Nama Anggota 4', npm: 'NPM' },   // ISI
+  { nama: 'Aldi Kurnia Fadillah', npm: '50423106' },
+  { nama: 'Alexandro Kalindra E.', npm: '50423111' },
+  { nama: 'Rahmah Dwi Afifah', npm: '11123092' },
+  { nama: 'Yazid Hilmi Allamsyah', npm: '51423474' },
 ]
 
 export const RINGKASAN =

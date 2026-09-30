@@ -66,6 +66,7 @@ function TentangProyek() {
       <div className="blok">
         <h2>Tim Pengembang</h2>
         <p className="blok-teks">
+          <strong>{IDENTITAS.namaTim}</strong><br />
           {IDENTITAS.kompetisi}. {IDENTITAS.institusi}.
         </p>
         <div className="tim-grid">
