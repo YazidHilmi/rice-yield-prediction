@@ -116,8 +116,7 @@ function App() {
         {statusServer === 'memeriksa' && (
           <div className="server-warmup">
             Menghidupkan server backend, mohon tunggu ({detikServer} detik berjalan, dapat memakan waktu
-            hingga 5 menit). Jika ini terjadi saat demo, hubungi penyelenggara untuk membuka aplikasi
-            beberapa menit lebih awal.
+            hingga 5 menit).
           </div>
         )}
 
