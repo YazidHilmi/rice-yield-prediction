@@ -5,10 +5,10 @@
   "data_uji": "Tahun 2024",
   "jumlah_data_uji": 60,
   "metrik": {
-    "mae_ton": 11697.059404622394,
-    "rmse_ton": 18746.7265001669,
-    "r2": 0.8308721689297378,
-    "mae_relatif_persen": 20.648830987277012
+    "mae_ton": 11982.938,
+    "rmse_ton": 18855.239,
+    "r2": 0.829,
+    "mae_relatif_persen": 21.1534927654757
   },
   "kepentingan_kelompok_fitur": [
     {

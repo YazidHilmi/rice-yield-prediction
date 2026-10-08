@@ -59,12 +59,12 @@ function PerformaModel() {
   const kartu = [
     {
       label: 'MAE',
-      nilai: `${formatAngka(m.mae_ton, 0)} Ton`,
+      nilai: `${formatAngka(m.mae_ton, 3)} Ton`,
       arti: 'Rata-rata selisih absolut antara prediksi dan produksi aktual per bulan.',
     },
     {
       label: 'RMSE',
-      nilai: `${formatAngka(m.rmse_ton, 0)} Ton`,
+      nilai: `${formatAngka(m.rmse_ton, 3)} Ton`,
       arti: 'Seperti MAE, tetapi memberi bobot lebih pada kesalahan yang besar.',
     },
     {
